@@ -366,31 +366,37 @@ body {
   padding-bottom: 80px;
 }
 
-.experience__box-title {
-  padding-right: 200px;
-  padding-left: 200px;
-}
-
-.experience__list {
-  display: flex;
+@media screen and (min-width: 480px) {
+  .experience__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .experience__item {
-  flex-basis: 25%;
-  margin-right: 30px;
+  margin-bottom: 15px;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
   background-color: var(--white-color);
-}
-.experience__item:last-child {
-  margin-right: 0;
 }
 .experience__item > *:not(:last-child) {
   margin-bottom: 10px;
 }
 .experience__item svg {
   fill: var(--secondary-color);
+}
+@media screen and (min-width: 480px) {
+  .experience__item {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .experience__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .experience__block {
@@ -407,4 +413,75 @@ body {
   text-align: center;
   letter-spacing: 0.1px;
   color: var(--second-text-color);
+}
+
+.advice {
+  padding-top: 125px;
+  padding-bottom: 81px;
+}
+
+.advice__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .advice__list {
+    gap: 40px;
+  }
+}
+
+.advice__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white-color);
+}
+@media screen and (min-width: 480px) {
+  .advice__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advice__item {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+}
+
+.advice__text-wrapper {
+  flex: 1 1 auto;
+  padding: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .advice__text-wrapper {
+    text-align: center;
+  }
+}
+
+.advice__link:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.advice__subtitle {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.1px;
+  color: var(--text-color);
+}
+
+.advice__subtext {
+  margin-bottom: 30px;
+  line-height: 143%;
+  color: var(--second-text-color);
+}
+
+.advice__link-img {
+  display: block;
+}
+
+.advice__img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

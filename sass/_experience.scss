@@ -2,26 +2,21 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.experience__box-title {
-  padding-right: 200px;
-  padding-left: 200px;
-}
+
 .experience__list {
-  display: flex;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .experience__item {
-  flex-basis: calc(100% / 4);
-
-  margin-right: 30px;
+  margin-bottom: 15px;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 
   background-color: var(--white-color);
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   & > *:not(:last-child) {
     margin-bottom: 10px;
@@ -29,6 +24,13 @@
 
   & svg {
     fill: var(--secondary-color);
+  }
+  @media screen and (min-width: 480px) {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 .experience__block {
