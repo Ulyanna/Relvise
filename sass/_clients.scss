@@ -1,0 +1,40 @@
+.clients {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 20px 0 20px;
+    justify-content: space-between;
+  }
+}
+.clients__item {
+  flex-basis: calc((100% - 1 * 30px) / 2);
+  text-align: center;
+
+  @media screen and (min-width: 480px) {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: auto;
+  }
+}
+.clients__link {
+  display: block;
+  color: var(--second-text-color);
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  & > svg {
+    fill: currentColor;
+  }
+}
